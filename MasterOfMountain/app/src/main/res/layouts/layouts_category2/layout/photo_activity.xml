@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:title="갤러리"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:titleTextColor="#FFFFFF"
+        android:background="?attr/colorPrimary"/>
+    <com.cookandroid.mom.community.timeline.CustomViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/ll">
+    </com.cookandroid.mom.community.timeline.CustomViewPager>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnTimeline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사진"
+            android:textColor="@drawable/button_tlcolor_selector"
+            android:background="@drawable/button_tlbg_selector"
+            android:layout_weight = "1"
+            />
+        <Button
+            android:id="@+id/btnCrew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카메라"
+            android:background="@drawable/button_cwbg_selector"
+            android:textColor="@drawable/button_cwcolor_selector"
+            android:layout_weight = "1"
+            />
+    </LinearLayout>
+</RelativeLayout>

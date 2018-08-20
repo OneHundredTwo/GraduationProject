@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/noticeDiaNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffff"
+            android:text="NOTICE NUM"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="번 공지사항" />
+
+        <TextView
+            android:id="@+id/noticeDiaDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="yyyy-MM-dd hh:mm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WRITTEN BY "/>
+
+        <TextView android:id="@+id/noticeAdminId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADMIN_ID"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATEGORY"
+            android:layout_gravity="right"
+            />
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/noticeSpinCat"
+            android:layout_gravity="right">
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITLE : "/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITLE_VALUE"
+            android:id="@+id/noticeDiaTitle"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTENT"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/noticeDiaContent"
+        />
+
+
+
+
+
+
+
+
+</LinearLayout>

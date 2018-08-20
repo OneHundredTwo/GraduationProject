@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/notContent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="259dp"
+            android:layout_marginTop="259dp"
+            android:text="존재하는 글이 없습니다."/>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/timelineRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:background="@color/background"
+                android:layout_width="match_parent"
+                android:layout_height="518dp"
+                android:id="@+id/listView"
+                android:divider="@color/background"
+                >
+            </ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnFloating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/create"
+            app:backgroundTint="#66BB6A"
+            app:rippleColor="#C8E6C9"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"/>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

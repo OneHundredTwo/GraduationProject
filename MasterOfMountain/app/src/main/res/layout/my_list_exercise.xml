@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 날짜 범위 선택하는 텍스트뷰 / 날짜선택 다이얼로그 호출하는 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <!-- 시작시간 -->
+            <TextView android:id="@+id/exList_stTime"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="start time"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:background="@drawable/back"
+                android:layout_weight="1"
+                />
+            <ImageButton android:id="@+id/exList_stBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calendar"
+                android:scaleType="fitCenter"
+                />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="~ "
+                android:textSize="15dp"
+                android:textStyle="bold|italic"/>
+
+            <!-- 끝시간 -->
+            <TextView android:id="@+id/exList_endTime"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="end time"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:background="@drawable/back"
+                android:layout_weight="1"
+                />
+            <ImageButton android:id="@+id/exList_endBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calendar"
+                android:scaleType="fitCenter"
+
+                />
+            <Button
+                android:id="@+id/exList_search"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="#66BB6A"
+                android:text="검색하기"/>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+            android:id="@+id/exList_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="운동기록이 없습니다"
+            android:textSize="40dp"
+            android:gravity="center"/>
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/exList_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                    <ListView
+                        android:id="@+id/exList_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background">
+                    </ListView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_red"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="15dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="20dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#ccffffff"
+        fab:menu_fab_label="닫기">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sprint"
+            fab:fab_size="mini"
+            fab:fab_label="운동 시작" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/man_in_hike"
+            fab:fab_size="mini"
+            fab:fab_label="등산 시작" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+</FrameLayout>

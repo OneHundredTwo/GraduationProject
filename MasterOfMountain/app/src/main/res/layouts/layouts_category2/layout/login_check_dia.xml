@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="이미 로그인된 기기가 있습니다, 로그인을 해제하고 로그인 하시겠습니까?"/>
+</LinearLayout>

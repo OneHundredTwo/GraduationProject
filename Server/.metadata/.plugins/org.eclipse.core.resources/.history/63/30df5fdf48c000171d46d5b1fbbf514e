@@ -1,0 +1,9 @@
+package fcm;
+
+public class FCMUtil {
+   final protected static String requestMethod = "POST";
+   final protected static String fcmServerKey = "key=AAAAP1XEhW0:APA91bExwjuQ1GQ-8XoxN7ww1NsoN7sBD1KwUoZCten6wj2SqD9XVuocnX-37Ks70d4N8V2yBMMCaW9a3XMC2vKJYd3HmTGD3XcnIVdHpH0rvUgg0_EDpdnmzDnQQ52cYBMm-PdTlVt-";
+   //*오류1 : "key="도 Authorization속성의 값이다.=>이것때문에 인증이 안됐었다...
+   final protected static String contentType = "application/json";
+   final protected static String senderId = "272021882221";
+   }

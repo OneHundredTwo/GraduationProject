@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.sql.*"%>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%! 
+   Connection conn = null;
+   PreparedStatement pstmt = null;
+   PreparedStatement pstmt2 = null;
+   ResultSet rs = null;
+   
+   String dbServerIp = "localhost";
+   String port = "4000";
+   String dbId = "root";
+   String dbPwd = "0000";
+   String dbName = "mountain";
+   
+   
+   
+    String jdbc_driver = "com.mysql.jdbc.Driver";
+   String jdbc_url = "jdbc:mysql://"+dbServerIp+":"+port+"/"+dbName; 
+%>
+<% 
+   
+   int n=0;
+   try{
+      Class.forName(jdbc_driver);
+      conn = DriverManager.getConnection(jdbc_url,dbId,dbPwd);
+      String sql = "UPDATE mountain.mountain SET mPhoto = ? WHERE mountain.mPhoto = ?";
+      pstmt = conn.prepareStatement(sql);
+      for(int i=0; i<100; i++){
+         pstmt.setString(1, "m"+(i+1)+".jpg");
+         pstmt.setString(2, ""+(i+1));
+         pstmt.executeUpdate();
+         System.err.println((i+1)+"번째 성공");
+      }
+      
+      
+   }catch(SQLException e){
+         System.out.println(e.toString());
+         out.println("정보를 저장하는데 오류가 발생하였습니다.");
+   }finally{
+      if(conn!=null)
+         conn.close();
+      if(rs!=null)
+         rs.close();
+   }
+   
+%>

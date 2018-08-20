@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.2"
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            universalApk false
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.cookandroid.mom"
+        //GpsInfo에서 locationManager를 사용하기위해 강제로 sdk버전을 낮춤.
+        minSdkVersion 21
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/layouts/layouts_category2',
+                    'src/main/res/layouts',
+                    'src/main/res'
+            ]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:support-v4:25.3.1'
+    testCompile 'junit:junit:4.12'
+    /*직접 추가한 .jar 파일들 */
+    //
+    compile files('libs/json-20160810.jar')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+    compile 'com.android.support:design:24.2.1'
+    //알림서비스를 위한 구글 서비스 라이브러리
+    compile 'com.google.firebase:firebase-messaging:11.0.1'
+    compile 'com.firebase:firebase-jobdispatcher:0.6.0'
+    //스케쥴관리를 위해 캘린더를 보여주는 MatrialCalendarView를 포함시키기위한 compile코드.
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+    //타임라인 작성 중 멀티미디어 자료를 만들기위한 사진/편집 라이브러리
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+    compile 'com.yalantis:ucrop:2.1.1'
+    //Floating Menu Action Button을 쓰기위한 라이브러리
+    compile 'com.github.clans:fab:1.6.4'
+    //Google-fitness를 사용하기 위한 라이브러리
+    compile 'com.google.android.gms:play-services-fitness:11.0.1'
+    testCompile 'junit:junit:4.12'
+    provided 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    compile 'org.jetbrains:annotations-java5:15.0'
+    //다음지도를 사용하기위한 라이브러리(.jar 추가)
+    compile project(':libDaumMapAndroid')
+    //Button UI 라이브러리
+    compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+

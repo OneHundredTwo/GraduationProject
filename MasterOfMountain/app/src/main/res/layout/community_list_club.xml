@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="10dp"
+    android:background="#FFFFFF"
+    android:id="@+id/clubrl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/clubPic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/clubName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/clubPic"
+        android:layout_alignTop="@+id/clubPic"
+        android:text="동호회 이름 : "/>
+    <TextView
+        android:id="@+id/clubID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/clubPic"
+        android:layout_below="@+id/clubName"
+        android:text = "개설자 : "/>
+    <TextView
+        android:id="@+id/clubContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clubID"
+        android:layout_toRightOf="@+id/clubPic"
+        android:layout_above="@+id/cntlay"
+        android:text="내용 : "/>
+    <LinearLayout
+        android:id = "@+id/cntlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clubPic"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/clubPic"
+        android:layout_alignStart="@+id/clubPic"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/memcnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "회원수 : "
+            android:layout_weight="1.5"
+            />
+            <TextView
+            android:id = "@+id/clubdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/clubPic"
+            android:text = "개설날짜 : "
+            android:layout_weight="1"/>
+        <TextView
+            android:id = "@+id/crewcnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/clubPic"
+            android:text = "크루 수 : "
+            android:layout_weight="1.5"/>
+    </LinearLayout>
+
+
+    <!--<Button
+        android:id="@+id/course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:text="코스 보기"/>-->
+    <View
+        android:layout_height="5dp"
+        android:layout_width="wrap_content"
+        android:background="@color/background"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+    </View>
+
+</RelativeLayout>

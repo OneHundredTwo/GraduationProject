@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+    <%@ page import = "java.sql.*,org.json.*"%>
+    <% request.setCharacterEncoding("UTF-8"); %>
+    <%!
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	PreparedStatement pstmt2 = null;
+	ResultSet rs = null;
+	String dbServerIp = "localhost";
+	String port = "4000";
+	String dbId = "root";
+	String dbPwd = "0000";
+	String dbName = "mountain";
+	
+	String jdbc_driver = "com.mysql.jdbc.Driver";
+	String jdbc_url = "jdbc:mysql://"+dbServerIp+":"+port+"/"+dbName;
+%>
+<% 
+	JSONObject jobj = new JSONObject();
+	JSONArray jobjArr = new JSONArray();
+	
+	try{
+		
+		Class.forName(jdbc_driver);
+		conn = DriverManager.getConnection(jdbc_url,dbId,dbPwd);
+		String sql = "update mountain.token set id=NULL where tokenid = ?";
+		pstmt = conn.prepareStatement(sql);
+		
+		pstmt.setString(1, request.getParameter("token"));
+		pstmt.execute();
+		out.print("{'status':1}");
+		
+	}catch(SQLException e){
+		System.out.println(e.toString());
+		out.print("{'status':0}");
+	}finally{
+		if(conn!=null)
+			conn.close();
+		if(rs!=null)
+			rs.close();
+	}
+
+%>

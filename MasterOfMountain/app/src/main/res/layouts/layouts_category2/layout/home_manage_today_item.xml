@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_height="150dp"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:src="@drawable/d"
+        android:id="@+id/today_item_picture"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="TITLE"
+                android:textStyle="bold"
+                android:layout_weight="6"
+                android:id="@+id/today_item_title"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="yyyy-MM-dd"
+                android:layout_weight="4"
+                android:id="@+id/today_item_date"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="CONTENT"
+            android:id="@+id/today_item_content"/>
+
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/today_item_isshow"/>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/back">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:textSize="15dp"
+        android:text="CAT"
+        android:gravity="center"
+        android:id="@+id/noticeCat"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="new"
+        android:textStyle="bold"
+        android:textColor="#00ff00"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        android:id="@+id/notice_isNew"/>
+    <!-- isNew가 활성화 : 18자 , isNew 비활성화 : 19자-->
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:gravity="left"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:text="가나다라마바사아자차카타파하카타파하..."
+        android:id="@+id/noticeTitle"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:text="2017-10-25"
+        android:textSize="13dp"
+        android:gravity="right|center_vertical"
+        android:id="@+id/noticeDate"
+        android:paddingRight="5dp"/>
+
+
+</LinearLayout>
+

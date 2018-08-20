@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/crewregistry_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        ><!--  app:theme 타이틀 색, 백버튼 흰색으로 변경-->
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/crewregistry_toolbar"
+        >
+        <LinearLayout
+            android:id="@+id/linearsub1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:text="동호회 : "
+                android:textSize="15dp"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back">
+                <Spinner
+                    android:id="@+id/clubID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="지역:"
+                android:textSize="15dp"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/back">
+
+                <Spinner
+                    android:id="@+id/region"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:layout_below="@+id/linear1"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="산 :"
+            android:textSize="15dp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/back"
+            android:weightSum="1"
+            android:layout_weight="0.45">
+
+            <Spinner
+                android:id="@+id/mName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/linear3"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:text="코스 : "
+            android:textSize="15dp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/back">
+            <Spinner
+                android:id="@+id/course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="left|center"
+            android:textSize="15dp"
+            android:text="코스"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/linear4"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:text="인원 : "
+            android:textSize="15dp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/back">
+            <Spinner
+                android:id="@+id/joinNum"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="명"
+            android:textSize="15dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/linear5"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:text="날짜 : "
+            android:textSize="15dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text=" 년 "/>
+        <TextView
+            android:id="@+id/monthOfyear"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text=" 월 " />
+        <TextView
+            android:id="@+id/dayOfmonth"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text=" 일 " />
+        <Button
+            android:id="@+id/btnData"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="날짜 설정"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/linear6"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:text="시간 :"
+            android:textSize="15dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/hourOfday"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text=" 시 " />
+        <TextView
+            android:id="@+id/minute"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text=" 분 " />
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="시간 설정"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/lastlinear"
+        android:layout_below="@+id/linear7"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:text="내용 : "
+            android:textSize="15dp"/>
+        <EditText
+            android:background="@color/colorWhite"
+            android:id = "@+id/CrewContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lastlinear"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+        <com.dd.processbutton.iml.ActionProcessButton
+            android:id = "@+id/insertCrewOK"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button"
+            custom:pb_colorComplete="@color/green_complete"
+            custom:pb_colorNormal="@color/button"
+            custom:pb_colorPressed="@color/buttonselect"
+            custom:pb_colorProgress="@color/purple_progress"
+            android:text="등록"
+            android:textSize="20dp"
+            custom:pb_textComplete="완료"
+            custom:pb_textProgress="Loading.."
+            custom:pb_textError="Error"/>
+        <Button
+            android:id="@+id/cancelCrew"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button"
+            android:text="취소"
+            android:textSize="20dp"/>
+    </LinearLayout>
+</RelativeLayout>

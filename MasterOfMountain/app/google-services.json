@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "272021882221",
+    "firebase_url": "https://masterofmountain-13b09.firebaseio.com",
+    "project_id": "masterofmountain-13b09",
+    "storage_bucket": "masterofmountain-13b09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272021882221:android:3eea11edb7f4bf60",
+        "android_client_info": {
+          "package_name": "com.cookandroid.mom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272021882221-i6r0iaiknld9uqn88sokm7i4tgf42nna.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn4P5jzuk8eb6SfiJg3KEDa7MRSGYl-YY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

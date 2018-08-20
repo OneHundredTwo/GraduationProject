@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="10dp"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:background="@drawable/custom_shape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:paddingLeft="1dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp">
+        <RelativeLayout
+            android:background="@color/colorWhite"
+            android:id="@+id/clubrl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/crewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="크루 등록자 : "
+                android:textSize="15dp"
+                android:padding="5dp"/>
+            <TextView
+                android:id = "@+id/crewClub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crewID"
+                android:text = "동호회 이름 : "
+                android:layout_weight="1.5"
+                android:textSize="15dp"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/crewMt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crewClub"
+                android:text = "산 이름 : "
+                android:padding="5dp"
+                android:textSize="15dp"/>
+
+            <LinearLayout
+                android:id = "@+id/crewlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crewMt"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/crewjoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text = "참여인원 : "
+                    android:textSize="15dp"
+                    android:layout_weight="1.5"
+                    />
+                <TextView
+                    android:id = "@+id/crewdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/clubPic"
+                    android:text = "크루 일정 : "
+                    android:textSize="15dp"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

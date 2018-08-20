@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cookandroid.mom">
+
+    <!-- 와이파이 및 인터넷 사용 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 이 아래 설정한 권한들은, 앱설정->앱권한에서 사용자가 직접 허용/거부를 설정해야함
+    즉, '사용자가 허용하면 그 시스템 기능을 이용할 수 있음'이란 뜻으로 추가하는 권한들.-->
+    <!-- 기능 : 사용Activity -->
+    <!-- 카메라 기능 접근 퍼미션 : Photo -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 저장공간 사용 퍼미션 : Photo-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 오디오 및 비디오 저장 퍼미션 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 카메라 GPS 저장 퍼미션 : Android 5.0 (API level 21) 이상부터 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 진동 사용 퍼미션-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
+    <!-- GPS기능 사용 : -->
+    <uses-feature android:name="android.hardware.location.gps" />
+    <!-- 앱에서 카메라 기능을 사용 : Photo-->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/mom_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 카카오 맵 API를 사용하기위한 메타데이터 -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value= "5e6e44a41f1ac7676dd380f0a5350d9a"/>
+
+        <activity
+            android:name=".LoadingActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".home.RegistryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".community.WriteCrewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mt.MtDetailInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".home.NoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".community.WriteTimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".community.timeline.PhotoActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".community.timeline.CheckActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- 카메라 라이브러리 사용 Activity -->
+        <activity  android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!-- 동호회 관련 Acitivity -->
+
+        <activity android:name=".community.club.InsertCrewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".community.club.ClubRegistryActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".community.club.ClubDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".community.club.ClubManagementActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".community.club.InsertClubActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".community.club.CrewManagementActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".community.club.CrewDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+
+        <!-- 맵관련 Activity -->
+        <activity android:name=".mt.map.MapActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".mt.map.CourseItemMapActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name=".home.search.MtSearchActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name=".home.search.MtSafetyActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity android:name=".my.ExerciseActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name=".my.EditActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <!-- 관리자 UI Activity -->
+        <activity android:name=".home.ManageActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- 알람서비스를 이용하기위해 클라이언트 식별을 할 Firebase Instance ID 서비스를 상속받은 클래스 -->
+        <service android:name=".util.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- 알람서비스를 이용하기위해 메세징서비스를 제공할 Firebase Messaging 서비스를 상속받은 클래스 -->
+        <service android:name=".util.UserMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. : 알람메세지가 수신되었을때 기본으로 보여질 아이콘
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/mom_notify_icon" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. 알람메세지가 수신되었을때 기본테마색상
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        AndroidManifest.xml
+
+    </application>
+
+</manifest>

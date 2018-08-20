@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+    prefix : exResult_
+     ids
+     TextView : day, mtName, course, steps, distance, calories, extime
+     Button : save, cancel
+
+    -->
+    <!-- 날짜 나오는 라인 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 날짜 -->
+        <TextView android:id="@+id/exResult_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yyyy년 mm월 dd 일"
+            android:background="#FAF022"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+
+    <!-- 산 정보 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <!-- 산 사진 / 산위치 지도 마커-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mom_notify_icon"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"/>
+        <!-- 산이름/ 코스 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView android:id="@+id/exResult_mtName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Result Mountain Name"
+                android:layout_weight="1"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/exResult_course"
+                android:text="Result Course"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 시간, 걸음수, 거리, 소모한 칼로리 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <!-- 시간 -->
+        <TextView
+            android:id="@+id/exResult_extime"
+            android:layout_width="211dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textSize="50dp"
+            android:textStyle="bold|italic" />
+
+        <!-- 걸음수, 거리, 소모한 칼로리 : 한 칸단 구성 : <아이콘>|<값> -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!-- 걸음 수 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/steps_icon" />
+
+                <TextView
+                    android:id="@+id/exResult_steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="step count " />
+            </LinearLayout>
+            <!-- 거리 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/distance_icon" />
+
+                <TextView
+                    android:id="@+id/exResult_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="distance" />
+            </LinearLayout>
+            <!-- 소모한 칼로리 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/calories_icon" />
+
+                <TextView
+                    android:id="@+id/exResult_calories"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="calories" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 저장여부 확인 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+    </LinearLayout>
+
+</LinearLayout>

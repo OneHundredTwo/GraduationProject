@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="focused">#1B8C8C8C</drawable>
+    <color name="background">#C5E1A5</color>
+    <color name="nonpressedbackground">#DCEDC8</color>
+    <color name="button">#AED581</color>
+    <color name="buttonselect">#9CCC65</color>
+    <color name="colorPrimary">#8BC34A</color>
+    <color name="colorPrimaryDark">#33691E</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#FF747474</color>
+    <color name="bg_select">#66b7f9</color>
+
+</resources>
+

@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.sql.*"%>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%! 
+   Connection conn = null;
+   PreparedStatement pstmt = null;
+   PreparedStatement pstmt2 = null;
+   ResultSet rs = null;
+   
+   String jdbc_driver = "com.mysql.jdbc.Driver";
+   String jdbc_url = "jdbc:mysql://localhost:4000/mountain";
+   
+   
+%>
+<% 
+System.out.println(request.getRequestURL());
+   int n=0;
+   try{
+      Class.forName(jdbc_driver);
+      conn = DriverManager.getConnection(jdbc_url,"root","0000");
+      String sql = "SELECT id FROM member WHERE id=? and password=?";
+      pstmt = conn.prepareStatement(sql);
+      System.out.println(request.getParameter("id")+request.getParameter("password"));
+      pstmt.setString(1, request.getParameter("id"));
+      pstmt.setString(2, request.getParameter("password"));
+      rs = pstmt.executeQuery();
+      if(!rs.next()){
+         System.out.println("아이디가 없거나 비밀번호가 올바르지 않습니다");
+         out.println("아이디가 없거나 비밀번호가 올바르지 않습니다");
+      }else{
+         System.out.println("로그인 성공");
+         out.println("로그인 성공");
+         conn.close();
+         rs.close();
+         
+         sql = "Update token set id = ? where tokenid = ?";
+         pstmt = conn.prepareStatement(sql);
+         pstmt.setString(1, request.getParameter("id"));
+         pstmt.setString(2, request.getParameter("token"));
+         pstmt.executeUpdate();
+      }
+      
+      conn.close();
+      rs.close();
+      
+      
+   }catch(SQLException e){
+      e.getMessage();
+}
+%>

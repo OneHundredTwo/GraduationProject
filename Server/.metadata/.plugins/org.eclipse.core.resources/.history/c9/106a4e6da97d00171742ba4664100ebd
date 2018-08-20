@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+   <%@ page import="java.awt.Color, org.json.*" %>
+<%
+JSONObject json = new JSONObject();
+json.put("hi", "nice");
+json.put("hi", "not nice");
+
+System.out.println(json.toString());
+
+
+%>

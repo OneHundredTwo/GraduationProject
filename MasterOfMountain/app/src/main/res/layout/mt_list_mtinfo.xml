@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="10dp"
+    android:background="#FCFCEC"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:id="@+id/sanPic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/sanName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/sanPic"
+        android:layout_alignTop="@+id/sanPic"
+        android:paddingLeft="10dp"
+        android:textSize="25dp"
+        android:gravity="center|left"
+        android:typeface="monospace"
+        android:text="이름"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sanName"
+        android:layout_toRightOf="@+id/sanPic"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/sanPic">
+        <TextView
+            android:id="@+id/sanAdd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:text="주소"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:typeface="monospace"
+
+            />
+        <TextView
+            android:id="@+id/sanHeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="고도"
+            android:textSize="25dp"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:typeface="monospace"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_height="5dp"
+        android:layout_width="wrap_content"
+        android:background="@color/background"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+    </View>
+
+</RelativeLayout>
