@@ -16,6 +16,11 @@
 ## 개발 파트
 ### 안드로이드
 * 스케쥴러
+	* [Material-Calendar View](https://github.com/prolificinteractive/material-calendarview)를 활용한 스케쥴러 UI
+	* Calendar View를 이용한 월별 주요일정 확인 및 날짜 터치시 날짜 스케쥴리스트 출력 및 관리
+	* 일정 중요도 및 크루일정을 색깔로 나누고 EventDecorator를 상속하여 데코레이션 커스터마이징
+	* 개인일정과 등록 및 가입한 크루일정을 한 스케쥴러에서 관리할 수 있도록 조인
+![MoM 스케쥴러](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/and_schedular.png "mom 스케쥴러")
 
 ### 서버
 *  FCM(Firebase Cloude Message) API를 이용한 Push 알림 메세지 
