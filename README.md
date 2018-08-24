@@ -1,6 +1,5 @@
 # MasterOfMountain
-![MasterOfMountain intro](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/img_loading.png "MoM 인트로")
-{: .text-center}
+> ![MasterOfMountain intro](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/img_loading.png "MoM 인트로")
 > 대한민국 100대 명산 데이터를 바탕으로 등산로 및 등산커뮤니티기능을 제공하는 안드로이드 어플리케이션 입니다.
 
 
