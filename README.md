@@ -21,6 +21,8 @@
 	* 일정 중요도 및 크루일정을 색깔로 나누고 EventDecorator를 상속하여 데코레이션 커스터마이징
 	* 개인일정과 등록 및 가입한 크루일정을 한 스케쥴러에서 관리할 수 있도록 조인
 ![MoM 스케쥴러](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/and_schedular.png "mom 스케쥴러")
+* SK Planet Weather API 를 이용한 산 날씨정보 출력
+![날씨 API를 이용한 산날씨 출력](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/and_weather.png "날씨 API를 이용한 산날씨 출력")
 
 ### 서버
 *  FCM(Firebase Cloude Message) API를 이용한 Push 알림 메세지 
