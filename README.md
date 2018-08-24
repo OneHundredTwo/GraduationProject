@@ -52,3 +52,6 @@ FCMGrouping group = new FCMGrouping(request.getParameter("planNum"), grouptoken)
 	* firebase.iid 패키지에서 제공하는 FirebaseInstanceIdService를 이용, 어플리케이션을 처음 킬 때 디바이스를 유일하게 구분하는 토큰을 발급받음
 	* 서버 DB에 토큰을 저장하고, 비로그인시 로그인할 때 해당 토큰값을 넘겨주면 저장된 사용자를 인증하여 자동로그인
 	* 토큰과 매핑된 아이디가 서버의 클라이언트로 유일하게 연결될 수 있도록하여, 중복로그인 방지
+	![Auto Login](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/server_auto_login.png "Auto login")
+	* 이미 로그인 되어있는 기기가 있을경우, 타 기기에서 로그인 시도시 아래와같이 로그인 해제 확인 후 로그인(2단계 로그인)
+	![Login](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/server_login_1.png "login")
