@@ -47,7 +47,7 @@ FCMGrouping group = new FCMGrouping(request.getParameter("planNum"), grouptoken)
 				.build();
 	message.send();
 ```
-	![Notifiaction Service](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/server_fcm_notification.png "Notification Service")
+![Notifiaction Service](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/server_fcm_notification.png "Notification Service")
 * 로그인 및 자동로그인 기능
 	* firebase.iid 패키지에서 제공하는 FirebaseInstanceIdService를 이용, 어플리케이션을 처음 킬 때 디바이스를 유일하게 구분하는 토큰을 발급받음
 	* 서버 DB에 토큰을 저장하고, 비로그인시 로그인할 때 해당 토큰값을 넘겨주면 저장된 사용자를 인증하여 자동로그인
