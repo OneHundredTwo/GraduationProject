@@ -29,9 +29,10 @@
 	![Android To Server](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/and_ant.png "Android To Server")
 ### 서버
 *  FCM(Firebase Cloude Message) API를 이용한 Push 알림 메세지 
-	*
-	*
-	*
+	* 회원가입, 로그인, 크루가입 등 서비스 전역에서 활용되는 알림서비스를 팀원들이 보다 쉽게 접근할 수 있도록 빌더 패턴을 이용해 FCM API 요청 객체를 생성할 수 있도록 함.
+	![FCM Builder Pattern](https://github.com/OneHundredTwo/GraduationProject/blob/master/forReadme/img/server_fcm1.png "FCM Builder Pattern")
+	* 나
+	* 다
 * 로그인 및 자동로그인 기능
 	* firebase.iid 패키지에서 제공하는 FirebaseInstanceIdService를 이용, 어플리케이션을 처음 킬 때 디바이스를 유일하게 구분하는 토큰을 발급받음
 	* 서버 DB에 토큰을 저장하고, 비로그인시 로그인할 때 해당 토큰값을 넘겨주면 저장된 사용자를 인증하여 자동로그인

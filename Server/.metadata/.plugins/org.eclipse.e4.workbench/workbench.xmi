@@ -11,6 +11,7 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1499161827874"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_9Lz_csBrEeephJZlGvjmSg" selectedElement="_9Lz_c8BrEeephJZlGvjmSg" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_9Lz_c8BrEeephJZlGvjmSg" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_9Lz_dMBrEeephJZlGvjmSg">
         <children xsi:type="advanced:Perspective" xmi:id="_9Lz_dMBrEeephJZlGvjmSg" elementId="org.eclipse.jst.j2ee.J2EEPerspective" selectedElement="_9Lz_dcBrEeephJZlGvjmSg" label="Java EE" iconURI="platform:/plugin/org.eclipse.jst.j2ee.ui/icons/full/cview16/j2ee_perspective.gif">
@@ -86,14 +87,14 @@
           <tags>persp.actionSet:pm.eclipse.editbox.ActionSetId</tags>
           <tags>persp.actionSet:ajelementCreation</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_9Lz_dcBrEeephJZlGvjmSg" selectedElement="_9Lz_dsBrEeephJZlGvjmSg" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="_9Lz_dsBrEeephJZlGvjmSg" elementId="topLeft" containerData="3391" selectedElement="_9Lz_d8BrEeephJZlGvjmSg">
+            <children xsi:type="basic:PartStack" xmi:id="_9Lz_dsBrEeephJZlGvjmSg" elementId="topLeft" containerData="1936" selectedElement="_9Lz_d8BrEeephJZlGvjmSg">
               <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_9Lz_d8BrEeephJZlGvjmSg" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_9L0BCcBrEeephJZlGvjmSg"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_9Lz_eMBrEeephJZlGvjmSg" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_9L0BLMBrEeephJZlGvjmSg"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_9Lz_ecBrEeephJZlGvjmSg" elementId="org.eclipse.jdt.ui.TypeHierarchy" toBeRendered="false" ref="_9L0BLcBrEeephJZlGvjmSg"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_9Lz_esBrEeephJZlGvjmSg" elementId="org.eclipse.jdt.ui.PackagesView" toBeRendered="false" ref="_9L0BLsBrEeephJZlGvjmSg"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_9Lz_e8BrEeephJZlGvjmSg" containerData="6609" selectedElement="_9Lz_fMBrEeephJZlGvjmSg">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_9Lz_e8BrEeephJZlGvjmSg" containerData="8064" selectedElement="_9Lz_fMBrEeephJZlGvjmSg">
               <children xsi:type="basic:PartSashContainer" xmi:id="_9Lz_fMBrEeephJZlGvjmSg" containerData="6368" selectedElement="_9Lz_fcBrEeephJZlGvjmSg" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_9Lz_fcBrEeephJZlGvjmSg" elementId="org.eclipse.ui.editorss" containerData="7000" ref="_9L0A9sBrEeephJZlGvjmSg"/>
                 <children xsi:type="basic:PartStack" xmi:id="_9Lz_fsBrEeephJZlGvjmSg" elementId="topRight" visible="false" containerData="3000" selectedElement="_9Lz_f8BrEeephJZlGvjmSg">
@@ -276,7 +277,7 @@
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <children xsi:type="basic:Part" xmi:id="_6L-8kMrEEeeQquzGo2kdbA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="InsertCrew.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;InsertCrew.jsp&quot; partName=&quot;InsertCrew.jsp&quot; title=&quot;InsertCrew.jsp&quot; tooltip=&quot;MoM/WebContent/InsertCrew.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/MoM/WebContent/InsertCrew.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2874&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;InsertCrew.jsp&quot; partName=&quot;InsertCrew.jsp&quot; title=&quot;InsertCrew.jsp&quot; tooltip=&quot;MoM/WebContent/InsertCrew.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/MoM/WebContent/InsertCrew.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2874&quot; selectionTopPixel=&quot;1140&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
           <tags>removeOnHide</tags>
@@ -695,7 +696,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9L0BtsBrEeephJZlGvjmSg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ISQXIKXkEeib1v1W4LS3SQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_9L0NdsBrEeephJZlGvjmSg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0ALckKd5EeiTKfB3SlMqIg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_9L0NdsBrEeephJZlGvjmSg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9L0Bw8BrEeephJZlGvjmSg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -734,7 +735,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9L0CJMBrEeephJZlGvjmSg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ISSzYKXkEeib1v1W4LS3SQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_9L0NGcBrEeephJZlGvjmSg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0ANRwqd5EeiTKfB3SlMqIg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_9L0NGcBrEeephJZlGvjmSg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9L0CMMBrEeephJZlGvjmSg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
